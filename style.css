@@ -1,0 +1,151 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'STIX Two Math', serif;
+}
+.container{
+    height: 100vh;
+}
+.titleBar{
+    height: 4%;
+    background-color: #4d5050;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.menuBar{
+    height: 4%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.menuBar div{
+    position: relative;
+    margin-left: 20px;
+    color: black;
+}
+.menu-section{
+    height: 8%;
+    background-color: #2ecc71;
+}
+.formulaBar{
+    height: 4%;
+    display: flex;
+
+}
+.formulaBar .selected-cell-section{
+    background-color: gray;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulaBar input{
+    width: 80%;
+    height:100%;
+    background-color: white;
+    color: black;
+    display: block;
+    border: none;
+    outline: none;
+
+}
+
+.grid{
+    height: 76%;
+    overflow: auto;
+    position: relative;
+
+
+}
+
+.sheet-section{
+    height: 4%;
+    background-color: #4d5050;
+}
+
+.blank-corner{
+    
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    position: fixed;
+    top: 20vh;
+    left: 0;
+}
+.row-number{
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ecc71;
+}
+.row-num-section{
+    display: inline-block;
+    position: fixed;
+    top: calc(20vh + 30px);
+    left: 0;
+    z-index: -10;
+
+    
+}
+.column-tags-section{
+    position: fixed;
+    display: flex;
+    background-color: #2ecc71;
+    height: 30px;
+    top: 20vh;
+    left: 30px;
+    z-index: -10;
+    
+
+}
+.column-tag{
+    height: 30px;
+    width: 80px;
+    flex-shrink: 0;
+    border: none;
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-section{
+    height: calc(76vh - 30px);
+    width: calc(100vw - 30px);
+    background-color: yellow;
+    position:absolute;
+    top: 30px;
+    left: 30px;
+    overflow: auto;
+}
+.row{
+    display: flex;
+    flex-shrink: 0;
+}
+.cell{
+    height: 30px;
+    width: 80px;
+    flex-shrink: 0;
+    display: flex;
+    text-align: left;
+    padding: 2px;
+    background-color: white;
+    outline: none;
+    border: 0.1px solid gray;
+}
+.selected-cell{
+    border: 2px solid rgb(52, 52, 212);
+
+}
